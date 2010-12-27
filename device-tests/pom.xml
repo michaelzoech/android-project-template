@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <!--
-  Copyright 2010 Michael Zoech
+  Copyright 2011 Michael Zoech
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -35,6 +35,11 @@
       <groupId>org.bitbrothers.android.template</groupId>
       <artifactId>app</artifactId>
       <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.jayway.android.robotium</groupId>
+      <artifactId>robotium-solo</artifactId>
+      <version>${robotium.version}</version>
     </dependency>
   </dependencies>
 
@@ -79,6 +84,8 @@
           </buildcommands>
           <classpathContainers>
             <classpathContainer>com.android.ide.eclipse.adt.ANDROID_FRAMEWORK</classpathContainer>
+            <!-- The JRE container is automatically added by the maven plugin. Adding it after
+                 the Android container helps Eclipse recognizing the project as Android project. -->
             <classpathContainer>org.eclipse.jdt.launching.JRE_CONTAINER</classpathContainer>
           </classpathContainers>
         </configuration>
