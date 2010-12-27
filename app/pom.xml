@@ -23,64 +23,12 @@
 
   <parent>
     <groupId>org.bitbrothers.android.template</groupId>
-    <artifactId>template-parent</artifactId>
+    <artifactId>apk-settings</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <relativePath>../poms/apk</relativePath>
   </parent>
 
   <artifactId>app</artifactId>
-  <packaging>jar</packaging>
-
-  <dependencies>
-  </dependencies>
-
-  <build>
-    <sourceDirectory>src</sourceDirectory>
-    <plugins>
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>build-helper-maven-plugin</artifactId>
-        <version>1.5</version>
-        <executions>
-          <execution>
-            <id>add-source</id>
-            <phase>generate-sources</phase>
-            <goals>
-              <goal>add-source</goal>
-            </goals>
-            <configuration>
-              <sources>
-                <source>gen</source>
-              </sources>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-eclipse-plugin</artifactId>
-        <version>2.8</version>
-        <configuration>
-          <downloadSources>true</downloadSources>
-          <downloadJavadocs>true</downloadJavadocs>
-          <projectnatures>
-            <projectnature>com.android.ide.eclipse.adt.AndroidNature</projectnature>
-            <projectnature>org.eclipse.jdt.core.javanature</projectnature>
-          </projectnatures>
-          <buildcommands>
-            <buildcommand>com.android.ide.eclipse.adt.ResourceManagerBuilder</buildcommand>
-            <buildcommand>com.android.ide.eclipse.adt.PreCompilerBuilder</buildcommand>
-            <buildcommand>org.eclipse.jdt.core.javabuilder</buildcommand>
-            <buildcommand>com.android.ide.eclipse.adt.ApkBuilder</buildcommand>
-          </buildcommands>
-          <classpathContainers>
-            <classpathContainer>com.android.ide.eclipse.adt.ANDROID_FRAMEWORK</classpathContainer>
-            <!-- The JRE container is automatically added by the maven plugin. Adding it after
-                 the Android container helps Eclipse recognizing the project as Android project. -->
-            <classpathContainer>org.eclipse.jdt.launching.JRE_CONTAINER</classpathContainer>
-          </classpathContainers>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
+  <packaging>${packaging.type}</packaging>
 
 </project>

@@ -23,40 +23,16 @@
 
   <parent>
     <groupId>org.bitbrothers.android.template</groupId>
-    <artifactId>apk-settings</artifactId>
+    <artifactId>template-parent</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <relativePath>../poms/apk</relativePath>
+    <relativePath>..</relativePath>
   </parent>
 
-  <artifactId>device-tests</artifactId>
-  <packaging>${packaging.type}</packaging>
+  <artifactId>shared-settings</artifactId>
+  <packaging>pom</packaging>
 
-  <dependencies>
-    <dependency>
-      <groupId>org.bitbrothers.android.template</groupId>
-      <artifactId>app</artifactId>
-      <version>${project.version}</version>
-      <scope>provided</scope>
-      <type>jar</type>
-    </dependency>
-    <dependency>
-      <groupId>com.jayway.android.robotium</groupId>
-      <artifactId>robotium-solo</artifactId>
-      <version>${robotium.version}</version>
-    </dependency>
-  </dependencies>
+  <modules>
+    <module>apk</module>
+  </modules>
 
-  <profiles>
-    <profile>
-      <id>maven</id>
-      <dependencies>
-        <dependency>
-          <groupId>org.bitbrothers.android.template</groupId>
-          <artifactId>app</artifactId>
-          <version>${project.version}</version>
-          <type>apk</type>
-        </dependency>
-      </dependencies>
-    </profile>
-  </profiles>
 </project>

@@ -22,6 +22,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <properties>
+    <android.platform>7</android.platform>
     <android.version>2.1.2</android.version>
     <hamcrest.version>1.1</hamcrest.version>
     <jdk.version>1.6</jdk.version>
@@ -29,6 +30,12 @@
     <mockito.version>1.8.5</mockito.version>
     <powermock.version>1.4.6</powermock.version>
     <robotium.version>1.9.0</robotium.version>
+
+    <!-- maven plugins -->
+    <plugin.android.version>2.8.3</plugin.android.version>
+    <plugin.build.helper.version>1.5</plugin.build.helper.version>
+    <plugin.compiler.version>2.3.2</plugin.compiler.version>
+    <plugin.eclipse.version>2.8</plugin.eclipse.version>
   </properties>
 
   <groupId>org.bitbrothers.android.template</groupId>
@@ -40,6 +47,7 @@
     <module>app</module>
     <module>device-tests</module>
     <module>jdk-tests</module>
+    <module>poms</module>
   </modules>
 
   <build>
@@ -47,7 +55,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>2.3.2</version>
+        <version>${plugin.compiler.version}</version>
         <configuration>
           <source>${jdk.version}</source>
           <target>${jdk.version}</target>
@@ -56,7 +64,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-eclipse-plugin</artifactId>
-        <version>2.8</version>
+        <version>${plugin.eclipse.version}</version>
         <configuration>
           <downloadSources>true</downloadSources>
           <downloadJavadocs>true</downloadJavadocs>
