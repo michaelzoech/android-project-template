@@ -50,8 +50,8 @@
 
   <modules>
     <module>app</module>
-    <module>device-tests</module>
     <module>jdk-tests</module>
+    <module>device-tests</module>
     <module>poms</module>
   </modules>
 
