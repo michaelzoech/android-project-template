@@ -69,21 +69,17 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>com.google.android</groupId>
+      <groupId>android</groupId>
       <artifactId>android</artifactId>
-      <version>${android.version}</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.google.android</groupId>
-      <artifactId>android-test</artifactId>
-      <version>${android.version}</version>
+      <version>${android.clean.version}</version>
+      <classifier>clean</classifier>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>com.google.android.maps</groupId>
       <artifactId>maps</artifactId>
       <version>${maps.version}</version>
+      <classifier>clean</classifier>
       <scope>test</scope>
     </dependency>
   </dependencies>

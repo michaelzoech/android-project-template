@@ -25,6 +25,7 @@
     <!-- android version numbers -->
     <android.platform>7</android.platform>
     <android.version>2.1.2</android.version>
+    <android.clean.version>2.1_r2</android.clean.version>
     <maps.version>7_r1</maps.version>
 
     <!-- libraries -->
